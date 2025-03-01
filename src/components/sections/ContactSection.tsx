@@ -40,7 +40,7 @@ const ContactSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSectionTitle
           title="Start Your Investment Journey"
-          subtitle="Contact our experts for a personalized consultation"
+          preTitle="Contact our experts for a personalized consultation"
           alignment="center"
         />
         

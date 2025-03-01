@@ -47,7 +47,7 @@ const FAQSection: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <AnimatedSectionTitle
           title="Frequently Asked Questions"
-          subtitle="Everything you need to know about investing in Dubai"
+          preTitle="Everything you need to know about investing in Dubai"
           alignment="center"
         />
         
