@@ -3,8 +3,13 @@ import React from 'react';
 import CustomButton from '../ui/CustomButton';
 
 const CTASection: React.FC = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <section className="bg-navy py-20 relative overflow-hidden">
+    <section className="bg-navy-dark py-20 relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0" style={{ 
@@ -26,10 +31,7 @@ const CTASection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <CustomButton 
               size="lg" 
-              onClick={() => {
-                const contactSection = document.getElementById('contact');
-                contactSection?.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={scrollToContact}
               className="text-xl px-10 py-5"
               showArrow
             >

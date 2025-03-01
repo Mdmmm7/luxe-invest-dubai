@@ -30,6 +30,11 @@ const HeroSection: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const scrollToContact = () => {
+    const contactSection = document.getElementById('contact');
+    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section 
       id="home" 
@@ -72,14 +77,15 @@ const HeroSection: React.FC = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <CustomButton size="lg" showArrow>
+            <CustomButton size="lg" showArrow onClick={scrollToContact}>
               Get Investment Insights
             </CustomButton>
             <CustomButton 
               size="lg" 
               variant="outline"
+              onClick={scrollToContact}
             >
-              Explore Properties
+              Contact Us
             </CustomButton>
           </div>
         </div>

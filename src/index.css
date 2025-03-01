@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -51,6 +50,7 @@
     --gold-light: 43 74% 62%;
     --navy: 223 35% 23%;
     --navy-light: 223 35% 33%;
+    --navy-dark: 223 35% 13%;
   }
 
   .dark {
@@ -95,6 +95,7 @@
     --gold-light: 43 74% 62%;
     --navy: 223 35% 23%;
     --navy-light: 223 35% 33%;
+    --navy-dark: 223 35% 13%;
   }
 }
 
@@ -129,6 +130,10 @@
     @apply bg-[hsl(var(--navy-light))];
   }
   
+  .bg-navy-dark {
+    @apply bg-[hsl(var(--navy-dark))];
+  }
+  
   .text-gold {
     @apply text-[hsl(var(--gold))];
   }
@@ -141,12 +146,20 @@
     @apply text-[hsl(var(--navy-light))];
   }
   
+  .text-navy-dark {
+    @apply text-[hsl(var(--navy-dark))];
+  }
+  
   .border-gold {
     @apply border-[hsl(var(--gold))];
   }
   
   .border-navy {
     @apply border-[hsl(var(--navy))];
+  }
+  
+  .border-navy-dark {
+    @apply border-[hsl(var(--navy-dark))];
   }
   
   .glass-card {

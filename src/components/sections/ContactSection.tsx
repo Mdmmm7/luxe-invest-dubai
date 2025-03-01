@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Building, Mail, Phone, MessageSquare } from 'lucide-react';
+import { Facebook, Instagram, Mail, MessageSquare, Phone, Send } from 'lucide-react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import CustomButton from '../ui/CustomButton';
 import { toast } from '@/hooks/use-toast';
@@ -152,29 +152,44 @@ const ContactSection: React.FC = () => {
                     <p className="text-base">invest@luxedubai.com</p>
                   </div>
                 </div>
-                
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 mt-1">
-                    <Building className="h-6 w-6 text-gold" />
-                  </div>
-                  <div className="ml-4">
-                    <p className="text-sm font-medium text-navy">Office</p>
-                    <p className="text-base">Sheikh Zayed Road, Downtown Dubai</p>
-                    <p className="text-base">Dubai, United Arab Emirates</p>
-                  </div>
-                </div>
               </div>
               
               <div className="mt-8">
-                <a 
-                  href="https://wa.me/971412345678" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-green-600 hover:bg-green-700 transition-colors"
-                >
-                  <MessageSquare className="mr-2 h-5 w-5" />
-                  Chat on WhatsApp
-                </a>
+                <h4 className="text-lg font-medium text-navy mb-4">Follow Us</h4>
+                <div className="flex space-x-4">
+                  <a 
+                    href="https://instagram.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
+                  >
+                    <Instagram className="h-5 w-5 text-navy" />
+                  </a>
+                  <a 
+                    href="https://facebook.com" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
+                  >
+                    <Facebook className="h-5 w-5 text-navy" />
+                  </a>
+                  <a 
+                    href="https://wa.me/971412345678" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
+                  >
+                    <MessageSquare className="h-5 w-5 text-navy" />
+                  </a>
+                  <a 
+                    href="https://t.me/luxeinvest" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
+                  >
+                    <Send className="h-5 w-5 text-navy" />
+                  </a>
+                </div>
               </div>
             </div>
             

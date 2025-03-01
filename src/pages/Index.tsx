@@ -2,7 +2,6 @@
 import React, { useEffect } from 'react';
 import HeroSection from '@/components/sections/HeroSection';
 import WhyDubaiSection from '@/components/sections/WhyDubaiSection';
-import InvestmentAreasSection from '@/components/sections/InvestmentAreasSection';
 import ExpertiseSection from '@/components/sections/ExpertiseSection';
 import ContactSection from '@/components/sections/ContactSection';
 import FAQSection from '@/components/sections/FAQSection';
@@ -32,6 +31,22 @@ const Index = () => {
     // Add scroll event listener
     window.addEventListener('scroll', handleScroll);
     
+    // Redirect all button clicks to contact form
+    const redirectButtons = () => {
+      document.querySelectorAll('button:not([type="submit"])').forEach(button => {
+        if (!button.hasAttribute('data-no-redirect')) {
+          button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const contactSection = document.getElementById('contact');
+            contactSection?.scrollIntoView({ behavior: 'smooth' });
+          });
+        }
+      });
+    };
+    
+    // Call after DOM is fully loaded
+    setTimeout(redirectButtons, 1000);
+    
     // Cleanup
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -40,7 +55,6 @@ const Index = () => {
     <div className="min-h-screen bg-white">
       <HeroSection />
       <WhyDubaiSection />
-      <InvestmentAreasSection />
       <ExpertiseSection />
       <FAQSection />
       <ContactSection />
