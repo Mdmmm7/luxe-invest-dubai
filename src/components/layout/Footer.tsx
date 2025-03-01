@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="font-playfair text-3xl font-bold mb-4">
-              <span className="text-gold">Luxe</span>Invest
+              <span className="text-gold">Vivo</span> Nest
             </div>
             <p className="text-white/70 mb-6">
               Premier real estate investment opportunities in Dubai.
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://wa.me/971412345678" 
+                  href="https://wa.me/447351129580" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   <MessageSquare className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://t.me/luxeinvest" 
+                  href="https://t.me/vivonest" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50 text-sm">
-          &copy; {new Date().getFullYear()} LuxeInvest. All rights reserved.
+          &copy; {new Date().getFullYear()} Vivo Nest. All rights reserved.
         </div>
       </div>
     </footer>

@@ -130,7 +130,16 @@ const ContactSection: React.FC = () => {
           {/* Contact info */}
           <div className="flex flex-col justify-between">
             <div className="glass-card p-8 rounded-xl mb-8 scroll-fade-left">
-              <h3 className="text-2xl font-semibold text-navy mb-6">Connect With Us</h3>
+              <h3 className="text-2xl font-semibold text-navy mb-6">Our Team</h3>
+              
+              {/* Team image */}
+              <div className="mb-6 overflow-hidden rounded-lg">
+                <img 
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                  alt="Vivo Nest Team during a deal" 
+                  className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
+                />
+              </div>
               
               <div className="space-y-6">
                 <div className="flex items-start">
@@ -139,7 +148,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-navy">Phone</p>
-                    <p className="text-base">+971 4 123 4567</p>
+                    <p className="text-base">+44 7351 129580</p>
                   </div>
                 </div>
                 
@@ -149,7 +158,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-navy">Email</p>
-                    <p className="text-base">invest@luxedubai.com</p>
+                    <p className="text-base">VivoNestUae@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -174,7 +183,7 @@ const ContactSection: React.FC = () => {
                     <Facebook className="h-5 w-5 text-navy" />
                   </a>
                   <a 
-                    href="https://wa.me/971412345678" 
+                    href="https://wa.me/447351129580" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
@@ -182,7 +191,7 @@ const ContactSection: React.FC = () => {
                     <MessageSquare className="h-5 w-5 text-navy" />
                   </a>
                   <a 
-                    href="https://t.me/luxeinvest" 
+                    href="https://t.me/vivonest" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
