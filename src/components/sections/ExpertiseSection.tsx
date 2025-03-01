@@ -2,6 +2,7 @@
 import React from 'react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import TestimonialCard from '../ui/TestimonialCard';
+import CustomButton from '../ui/CustomButton';
 
 const testimonialData = [
   {

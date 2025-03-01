@@ -45,6 +45,12 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom colors for our theme */
+    --gold: 43 74% 52%;
+    --gold-light: 43 74% 62%;
+    --navy: 223 35% 23%;
+    --navy-light: 223 35% 33%;
   }
 
   .dark {
@@ -83,6 +89,12 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    
+    /* Custom colors for our theme */
+    --gold: 43 74% 52%;
+    --gold-light: 43 74% 62%;
+    --navy: 223 35% 23%;
+    --navy-light: 223 35% 33%;
   }
 }
 
@@ -101,6 +113,42 @@
 }
 
 @layer components {
+  .bg-gold {
+    @apply bg-[hsl(var(--gold))];
+  }
+  
+  .bg-gold-light {
+    @apply bg-[hsl(var(--gold-light))];
+  }
+  
+  .bg-navy {
+    @apply bg-[hsl(var(--navy))];
+  }
+  
+  .bg-navy-light {
+    @apply bg-[hsl(var(--navy-light))];
+  }
+  
+  .text-gold {
+    @apply text-[hsl(var(--gold))];
+  }
+  
+  .text-navy {
+    @apply text-[hsl(var(--navy))];
+  }
+  
+  .text-navy-light {
+    @apply text-[hsl(var(--navy-light))];
+  }
+  
+  .border-gold {
+    @apply border-[hsl(var(--gold))];
+  }
+  
+  .border-navy {
+    @apply border-[hsl(var(--navy))];
+  }
+  
   .glass-card {
     @apply bg-white/80 backdrop-blur-md shadow-lg border border-white/20;
   }
@@ -123,6 +171,31 @@
   
   .reveal-animation.active {
     @apply animate-fade-in;
+  }
+}
+
+/* Shimmer animation gradient */
+@layer utilities {
+  .bg-shimmer-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
   }
 }
 

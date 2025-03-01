@@ -2,6 +2,7 @@
 import React from 'react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import FeatureCard from '../ui/FeatureCard';
+import CustomButton from '../ui/CustomButton';
 
 const featureData = [
   {
