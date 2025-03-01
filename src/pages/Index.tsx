@@ -34,6 +34,7 @@ const Index = () => {
     // Redirect all button clicks to contact form
     const redirectButtons = () => {
       document.querySelectorAll('button:not([type="submit"])').forEach(button => {
+        // Skip buttons with data-no-redirect attribute
         if (!button.hasAttribute('data-no-redirect')) {
           button.addEventListener('click', (e) => {
             e.preventDefault();

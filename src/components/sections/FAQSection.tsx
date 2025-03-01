@@ -66,6 +66,7 @@ const FAQSection: React.FC = () => {
                 <button
                   className="flex justify-between items-center w-full px-6 py-4 text-left"
                   onClick={() => toggleFAQ(index)}
+                  data-no-redirect="true"
                 >
                   <span className="text-lg font-medium text-navy">{faq.question}</span>
                   <span className="ml-6 flex-shrink-0">
