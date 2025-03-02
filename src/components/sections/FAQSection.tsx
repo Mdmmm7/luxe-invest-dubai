@@ -79,8 +79,10 @@ const FAQSection: React.FC = () => {
                 </button>
                 
                 <div 
-                  className={`transition-all duration-300 px-6 pb-4 ${
-                    openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                  className={`transition-all duration-300 px-6 ${
+                    openIndex === index 
+                      ? 'max-h-[500px] opacity-100 pb-4' 
+                      : 'max-h-0 opacity-0 overflow-hidden'
                   }`}
                 >
                   <p className="text-gray-600">{faq.answer}</p>
