@@ -3,10 +3,14 @@ import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import CustomButton from '../ui/CustomButton';
 import { MessageSquare } from 'lucide-react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,10 +21,14 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToContact = () => {
-    const contactSection = document.getElementById('contact');
-    contactSection?.scrollIntoView({ behavior: 'smooth' });
+  const scrollToSection = (id: string) => {
     setIsMobileMenuOpen(false);
+    if (isHomePage) {
+      const section = document.getElementById(id);
+      section?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/#' + id);
+    }
   };
 
   return (
@@ -32,7 +40,10 @@ const Header: React.FC = () => {
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-between">
-          <div className="font-playfair text-2xl font-bold text-white">
+          <div 
+            className="font-playfair text-2xl font-bold text-white cursor-pointer"
+            onClick={() => navigate('/')}
+          >
             <span className="text-gold">Vivo</span> Nest
           </div>
 
@@ -46,12 +57,11 @@ const Header: React.FC = () => {
             ].map((item) => (
               <a
                 key={item.name}
-                href={`#${item.id}`}
+                href={isHomePage ? `#${item.id}` : `/#${item.id}`}
                 className="text-white text-sm font-medium relative group"
                 onClick={(e) => {
                   e.preventDefault();
-                  const section = document.getElementById(item.id);
-                  section?.scrollIntoView({ behavior: 'smooth' });
+                  scrollToSection(item.id);
                 }}
               >
                 {item.name}
@@ -70,7 +80,7 @@ const Header: React.FC = () => {
               <MessageSquare className="mr-2 h-4 w-4" />
               WhatsApp
             </a>
-            <CustomButton onClick={scrollToContact}>
+            <CustomButton onClick={() => scrollToSection('contact')}>
               Contact Us
             </CustomButton>
           </div>
@@ -126,13 +136,11 @@ const Header: React.FC = () => {
             ].map((item) => (
               <a
                 key={item.name}
-                href={`#${item.id}`}
+                href={isHomePage ? `#${item.id}` : `/#${item.id}`}
                 className="text-white py-2 border-b border-gray-700"
                 onClick={(e) => {
                   e.preventDefault();
-                  const section = document.getElementById(item.id);
-                  section?.scrollIntoView({ behavior: 'smooth' });
-                  setIsMobileMenuOpen(false);
+                  scrollToSection(item.id);
                 }}
               >
                 {item.name}
@@ -148,7 +156,7 @@ const Header: React.FC = () => {
                 <MessageSquare className="mr-2 h-4 w-4" />
                 WhatsApp
               </a>
-              <CustomButton onClick={scrollToContact} className="w-full">
+              <CustomButton onClick={() => scrollToSection('contact')} className="w-full">
                 Contact Us
               </CustomButton>
             </div>
