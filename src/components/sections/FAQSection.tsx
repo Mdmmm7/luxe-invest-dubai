@@ -56,7 +56,7 @@ const FAQSection: React.FC = () => {
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className={`border rounded-lg overflow-hidden transition-all duration-300 ${
+                className={`border rounded-lg overflow-hidden transition-all duration-500 ${
                   openIndex === index 
                     ? 'border-gold shadow-md' 
                     : 'border-gray-200'
@@ -67,6 +67,8 @@ const FAQSection: React.FC = () => {
                   className="flex justify-between items-center w-full px-6 py-4 text-left"
                   onClick={() => toggleFAQ(index)}
                   data-no-redirect="true"
+                  aria-expanded={openIndex === index}
+                  aria-controls={`faq-content-${index}`}
                 >
                   <span className="text-lg font-medium text-navy">{faq.question}</span>
                   <span className="ml-6 flex-shrink-0">
@@ -79,10 +81,11 @@ const FAQSection: React.FC = () => {
                 </button>
                 
                 <div 
-                  className={`transition-all duration-300 px-6 ${
+                  id={`faq-content-${index}`}
+                  className={`transition-all duration-500 ease-in-out px-6 ${
                     openIndex === index 
-                      ? 'max-h-[500px] opacity-100 pb-4' 
-                      : 'max-h-0 opacity-0 overflow-hidden'
+                      ? 'max-h-[1000px] opacity-100 pb-6 visible' 
+                      : 'max-h-0 opacity-0 overflow-hidden invisible'
                   }`}
                 >
                   <p className="text-gray-600">{faq.answer}</p>
