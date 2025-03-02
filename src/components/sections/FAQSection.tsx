@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import { Plus, Minus } from 'lucide-react';
+import { cn } from '../../lib/utils';
 
 interface FAQItem {
   question: string;
@@ -52,26 +53,28 @@ const FAQSection: React.FC = () => {
         />
         
         <div className="max-w-4xl mx-auto mt-12">
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
               <div 
                 key={index} 
-                className={`border rounded-lg overflow-hidden transition-all duration-500 ${
+                className={cn(
+                  "border rounded-lg overflow-hidden",
                   openIndex === index 
                     ? 'border-gold shadow-md' 
-                    : 'border-gray-200'
-                } scroll-fade-up`}
+                    : 'border-gray-200',
+                  "scroll-fade-up"
+                )}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <button
-                  className="flex justify-between items-center w-full px-6 py-4 text-left"
+                  className="flex justify-between items-center w-full px-6 py-5 text-left hover:bg-gray-50 transition-colors"
                   onClick={() => toggleFAQ(index)}
                   data-no-redirect="true"
                   aria-expanded={openIndex === index}
                   aria-controls={`faq-content-${index}`}
                 >
-                  <span className="text-lg font-medium text-navy">{faq.question}</span>
-                  <span className="ml-6 flex-shrink-0">
+                  <span className="text-lg font-medium text-navy pr-4">{faq.question}</span>
+                  <span className="ml-2 flex-shrink-0 transition-transform duration-300">
                     {openIndex === index ? (
                       <Minus className="h-5 w-5 text-gold" />
                     ) : (
@@ -82,13 +85,16 @@ const FAQSection: React.FC = () => {
                 
                 <div 
                   id={`faq-content-${index}`}
-                  className={`transition-all duration-500 ease-in-out px-6 ${
+                  className={cn(
+                    "overflow-hidden transition-all duration-300 ease-in-out",
                     openIndex === index 
-                      ? 'max-h-[1000px] opacity-100 pb-6 visible' 
-                      : 'max-h-0 opacity-0 overflow-hidden invisible'
-                  }`}
+                      ? 'max-h-[500px] opacity-100 visible' 
+                      : 'max-h-0 opacity-0 invisible'
+                  )}
                 >
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
                 </div>
               </div>
             ))}
