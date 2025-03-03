@@ -58,10 +58,10 @@ const FAQSection: React.FC = () => {
               <div 
                 key={index} 
                 className={cn(
-                  "border rounded-lg overflow-hidden",
+                  "border rounded-lg overflow-hidden transition-colors duration-300",
                   openIndex === index 
                     ? 'border-gold shadow-md' 
-                    : 'border-gray-200',
+                    : 'border-gray-200 hover:border-gray-300',
                   "scroll-fade-up"
                 )}
                 style={{ transitionDelay: `${index * 100}ms` }}
@@ -74,7 +74,7 @@ const FAQSection: React.FC = () => {
                   aria-controls={`faq-content-${index}`}
                 >
                   <span className="text-lg font-medium text-navy pr-4">{faq.question}</span>
-                  <span className="ml-2 flex-shrink-0 transition-transform duration-300">
+                  <span className="flex-shrink-0 transition-transform duration-300">
                     {openIndex === index ? (
                       <Minus className="h-5 w-5 text-gold" />
                     ) : (
@@ -86,13 +86,14 @@ const FAQSection: React.FC = () => {
                 <div 
                   id={`faq-content-${index}`}
                   className={cn(
-                    "overflow-hidden transition-all duration-300 ease-in-out",
+                    "transition-all duration-300 ease-in-out",
                     openIndex === index 
-                      ? 'max-h-[500px] opacity-100 visible' 
-                      : 'max-h-0 opacity-0 invisible'
+                      ? 'max-h-[1000px] opacity-100 pb-6' 
+                      : 'max-h-0 opacity-0'
                   )}
+                  aria-hidden={openIndex !== index}
                 >
-                  <div className="px-6 pb-6">
+                  <div className="px-6 pt-1">
                     <p className="text-gray-600">{faq.answer}</p>
                   </div>
                 </div>
