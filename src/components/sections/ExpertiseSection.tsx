@@ -6,19 +6,19 @@ import CustomButton from '../ui/CustomButton';
 
 const testimonialData = [
   {
-    quote: "LuxeInvest helped me acquire a premium property in Downtown Dubai that has appreciated 18% in just 14 months. Their market insight was invaluable.",
+    quote: "VivoNest's smart home integration transformed my living experience. The energy monitoring system helped me reduce my electricity consumption by 25% within three months.",
     author: "Sarah Johnson",
-    position: "UK-based Investor",
+    position: "Homeowner in Portland",
   },
   {
-    quote: "The team's knowledge of Dubai's real estate regulations saved me time and money. They streamlined the entire investment process from start to finish.",
+    quote: "The air quality monitoring system alerted me to an issue I wasn't aware of. After addressing it with VivoNest's recommendations, my allergies have improved significantly.",
     author: "Michael Chen",
-    position: "Singapore Entrepreneur",
+    position: "Apartment Dweller in Chicago",
   },
   {
-    quote: "As a first-time international investor, I found their guidance exceptional. They handled everything while I was overseas and secured a property that delivers 8% annual yield.",
+    quote: "As a first-time homebuyer, I found their guidance exceptional. The smart water monitoring system has already prevented what could have been a major leak issue.",
     author: "Anna Petrov",
-    position: "Moscow Business Owner",
+    position: "New Homeowner in Seattle",
   }
 ];
 
@@ -30,57 +30,57 @@ const ExpertiseSection: React.FC = () => {
           <div>
             <AnimatedSectionTitle
               preTitle="Our Expertise"
-              title="Guiding Your Investment Journey"
+              title="Enhancing Living Environments"
               alignment="left"
               className="mb-8"
             />
             
             <div className="space-y-6 scroll-fade-right">
-              <p className="text-navy-light">
-                Our team of seasoned real estate investment advisors specializes in the Dubai property market. 
-                With deep local knowledge and global investment expertise, we guide you through every step of your 
-                investment journey.
+              <p className="text-gray-700">
+                Our team of experienced smart home specialists focuses on creating healthier, more efficient living spaces. 
+                With advanced monitoring technology and data-driven insights, we guide you through every step of 
+                optimizing your home environment.
               </p>
               
-              <div className="border-l-4 border-gold pl-6 py-1">
-                <p className="italic text-navy">
-                  "We don't just help you purchase property – we help you build a strategic investment 
-                  portfolio tailored to your financial goals."
+              <div className="border-l-4 border-emerald-500 pl-6 py-1">
+                <p className="italic text-gray-700">
+                  "We don't just install technology – we help you create a living space that actively 
+                  contributes to your wellbeing and environmental goals."
                 </p>
               </div>
               
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mt-1 mr-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-1 mr-3">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 12L9 16L19 6" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 12L9 16L19 6" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-navy-light">In-depth market analysis and property selection</p>
+                  <p className="text-gray-700">Comprehensive air quality monitoring and improvement</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mt-1 mr-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-1 mr-3">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 12L9 16L19 6" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 12L9 16L19 6" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-navy-light">ROI optimization and yield maximization strategies</p>
+                  <p className="text-gray-700">Energy usage optimization and sustainability solutions</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mt-1 mr-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-1 mr-3">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 12L9 16L19 6" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 12L9 16L19 6" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-navy-light">Legal guidance and regulatory compliance support</p>
+                  <p className="text-gray-700">Intelligent water management and leak prevention</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-gold/20 flex items-center justify-center mt-1 mr-3">
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-emerald-100 flex items-center justify-center mt-1 mr-3">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M5 12L9 16L19 6" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                      <path d="M5 12L9 16L19 6" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
                   </div>
-                  <p className="text-navy-light">Ongoing property management and portfolio growth</p>
+                  <p className="text-gray-700">Continuous monitoring and data-driven recommendations</p>
                 </div>
               </div>
               
@@ -91,12 +91,12 @@ const ExpertiseSection: React.FC = () => {
           </div>
           
           <div className="relative">
-            <div className="absolute -top-20 -right-20 w-64 h-64 bg-gold/10 rounded-full filter blur-3xl"></div>
-            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-navy/10 rounded-full filter blur-3xl"></div>
+            <div className="absolute -top-20 -right-20 w-64 h-64 bg-emerald-100/50 rounded-full filter blur-3xl"></div>
+            <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-emerald-200/30 rounded-full filter blur-3xl"></div>
             
             <div className="relative z-10 space-y-6">
-              <h3 className="text-2xl font-semibold text-navy mb-6 scroll-fade-left">
-                What Our Investors Say
+              <h3 className="text-2xl font-semibold text-emerald-800 mb-6 scroll-fade-left">
+                What Our Clients Say
               </h3>
               
               <div className="grid grid-cols-1 gap-6">
