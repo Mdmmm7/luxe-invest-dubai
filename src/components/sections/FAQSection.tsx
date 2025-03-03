@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import { Plus, Minus } from 'lucide-react';
@@ -37,19 +36,12 @@ const faqs: FAQItem[] = [
 ];
 
 const FAQSection: React.FC = () => {
-  // State to track which questions are open
-  const [openQuestions, setOpenQuestions] = useState<Set<number>>(new Set([0]));
+  // Only one question can be open at a time (or none)
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-  const toggleQuestion = (index: number) => {
-    setOpenQuestions(prev => {
-      const newOpenQuestions = new Set(prev);
-      if (newOpenQuestions.has(index)) {
-        newOpenQuestions.delete(index);
-      } else {
-        newOpenQuestions.add(index);
-      }
-      return newOpenQuestions;
-    });
+  const handleToggle = (index: number) => {
+    // Auto-collapse: If clicking the same question, close it; otherwise open the new one
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
@@ -67,20 +59,20 @@ const FAQSection: React.FC = () => {
               <div 
                 key={index} 
                 className={cn(
-                  "border rounded-lg shadow-sm",
-                  openQuestions.has(index) ? "border-gold" : "border-gray-200"
+                  "border rounded-lg shadow-sm transition-colors duration-300",
+                  activeIndex === index ? "border-gold" : "border-gray-200 hover:border-gray-300"
                 )}
               >
                 <button
-                  className="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-gold/30 rounded-lg"
-                  onClick={() => toggleQuestion(index)}
+                  className="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/30 rounded-lg"
+                  onClick={() => handleToggle(index)}
                   data-no-redirect="true"
-                  aria-expanded={openQuestions.has(index)}
+                  aria-expanded={activeIndex === index}
                   aria-controls={`faq-answer-${index}`}
                 >
                   <h3 className="text-lg font-medium text-navy pr-4">{faq.question}</h3>
-                  <span className="flex-shrink-0 text-gold">
-                    {openQuestions.has(index) ? (
+                  <span className="flex-shrink-0 text-gold transition-transform duration-300">
+                    {activeIndex === index ? (
                       <Minus className="h-5 w-5" />
                     ) : (
                       <Plus className="h-5 w-5" />
@@ -91,12 +83,14 @@ const FAQSection: React.FC = () => {
                 <div 
                   id={`faq-answer-${index}`}
                   className={cn(
-                    "px-6 pb-5",
-                    openQuestions.has(index) ? "block" : "hidden"
+                    "overflow-hidden transition-all duration-300 ease-in-out",
+                    activeIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   )}
-                  aria-hidden={!openQuestions.has(index)}
+                  aria-hidden={activeIndex !== index}
                 >
-                  <p className="text-gray-600">{faq.answer}</p>
+                  <div className="px-6 pb-5">
+                    <p className="text-gray-600">{faq.answer}</p>
+                  </div>
                 </div>
               </div>
             ))}
