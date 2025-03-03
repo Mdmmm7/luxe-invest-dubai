@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import AnimatedSectionTitle from '../ui/AnimatedSectionTitle';
 import { Plus, Minus } from 'lucide-react';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 interface FAQItem {
   question: string;
@@ -37,10 +37,10 @@ const faqs: FAQItem[] = [
 ];
 
 const FAQSection: React.FC = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
-  const toggleFAQ = (index: number) => {
-    setOpenIndex(openIndex === index ? null : index);
+  const handleToggle = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
   };
 
   return (
@@ -58,44 +58,45 @@ const FAQSection: React.FC = () => {
               <div 
                 key={index} 
                 className={cn(
-                  "border rounded-lg overflow-hidden transition-colors duration-300",
-                  openIndex === index 
-                    ? 'border-gold shadow-md' 
-                    : 'border-gray-200 hover:border-gray-300',
+                  "border rounded-lg transition-all duration-300 shadow-sm",
+                  activeIndex === index 
+                    ? "border-gold shadow-md" 
+                    : "border-gray-200 hover:border-gray-300",
                   "scroll-fade-up"
                 )}
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <button
-                  className="flex justify-between items-center w-full px-6 py-5 text-left hover:bg-gray-50 transition-colors"
-                  onClick={() => toggleFAQ(index)}
+                  className="flex justify-between items-center w-full px-6 py-5 text-left focus:outline-none focus:ring-2 focus:ring-gold/30 rounded-lg"
+                  onClick={() => handleToggle(index)}
                   data-no-redirect="true"
-                  aria-expanded={openIndex === index}
-                  aria-controls={`faq-content-${index}`}
+                  aria-expanded={activeIndex === index}
+                  aria-controls={`faq-answer-${index}`}
                 >
-                  <span className="text-lg font-medium text-navy pr-4">{faq.question}</span>
-                  <span className="flex-shrink-0 transition-transform duration-300">
-                    {openIndex === index ? (
-                      <Minus className="h-5 w-5 text-gold" />
+                  <h3 className="text-lg font-medium text-navy pr-4">{faq.question}</h3>
+                  <span className="flex-shrink-0 text-gold">
+                    {activeIndex === index ? (
+                      <Minus className="h-5 w-5 transition-transform duration-200" />
                     ) : (
-                      <Plus className="h-5 w-5 text-gold" />
+                      <Plus className="h-5 w-5 transition-transform duration-200" />
                     )}
                   </span>
                 </button>
                 
                 <div 
-                  id={`faq-content-${index}`}
+                  id={`faq-answer-${index}`}
                   className={cn(
-                    "transition-all duration-300 ease-in-out",
-                    openIndex === index 
-                      ? 'max-h-[1000px] opacity-100 pb-6' 
-                      : 'max-h-0 opacity-0'
+                    "overflow-hidden transition-all duration-300 ease-in-out",
+                    activeIndex === index ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
                   )}
-                  aria-hidden={openIndex !== index}
+                  aria-hidden={activeIndex !== index}
                 >
-                  <div className="px-6 pt-1">
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
+                  {/* Only render content when visible for better performance */}
+                  {(activeIndex === index || activeIndex === null) && (
+                    <div className="px-6 pb-5">
+                      <p className="text-gray-600">{faq.answer}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
