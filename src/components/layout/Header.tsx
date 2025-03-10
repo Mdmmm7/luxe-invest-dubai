@@ -44,7 +44,7 @@ const Header: React.FC = () => {
             className="font-playfair text-2xl font-bold text-white cursor-pointer"
             onClick={() => navigate('/')}
           >
-            <span className="text-gold">Vivo</span> Nest
+            <span className="text-gold">Sobha Realty</span> Capital
           </div>
 
           <nav className="hidden md:flex items-center space-x-8">

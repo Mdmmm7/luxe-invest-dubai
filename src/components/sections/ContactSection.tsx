@@ -136,7 +136,7 @@ const ContactSection: React.FC = () => {
               <div className="mb-6 overflow-hidden rounded-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Vivo Nest Team during a real estate negotiation" 
+                  alt="Sobha Realty Capital Team during a real estate negotiation" 
                   className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
                 />
               </div>
@@ -158,7 +158,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-navy">Email</p>
-                    <p className="text-base">VivoNestUae@gmail.com</p>
+                    <p className="text-base">SobhaRealtyCapital@gmail.com</p>
                   </div>
                 </div>
               </div>

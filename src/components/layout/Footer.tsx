@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="font-playfair text-3xl font-bold mb-4">
-              <span className="text-gold">Vivo</span> Nest
+              <span className="text-gold">Sobha Realty</span> Capital
             </div>
             <p className="text-white/70 mb-6">
               Premier real estate investment opportunities in Dubai.
@@ -66,7 +66,7 @@ const Footer: React.FC = () => {
         </div>
         
         <div className="border-t border-white/10 mt-8 pt-8 text-center text-white/50 text-sm">
-          &copy; {new Date().getFullYear()} Vivo Nest. All rights reserved.
+          &copy; {new Date().getFullYear()} Sobha Realty Capital. All rights reserved.
         </div>
       </div>
     </footer>

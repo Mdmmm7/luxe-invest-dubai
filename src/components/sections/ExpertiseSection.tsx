@@ -6,7 +6,7 @@ import CustomButton from '../ui/CustomButton';
 
 const testimonialData = [
   {
-    quote: "LuxeInvest helped me acquire a premium property in Downtown Dubai that has appreciated 18% in just 14 months. Their market insight was invaluable.",
+    quote: "Sobha Realty Capital helped me acquire a premium property in Downtown Dubai that has appreciated 18% in just 14 months. Their market insight was invaluable.",
     author: "Sarah Johnson",
     position: "UK-based Investor",
   },
