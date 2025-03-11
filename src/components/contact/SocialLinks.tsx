@@ -30,7 +30,7 @@ const SocialLinks: React.FC = () => {
         <MessageSquare className="h-5 w-5 text-navy" />
       </a>
       <a 
-        href="https://t.me/vivonest" 
+        href="https://t.me/znnn777" 
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"

@@ -46,7 +46,7 @@ const Footer: React.FC = () => {
                   <MessageSquare className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://t.me/vivonest" 
+                  href="https://t.me/znnn777" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
