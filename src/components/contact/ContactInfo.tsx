@@ -1,9 +1,29 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import SocialLinks from './SocialLinks';
+import { generateNegotiationRoomImage } from '@/services/runwareService';
+import { toast } from 'sonner';
 
 const ContactInfo: React.FC = () => {
+  const [imageUrl, setImageUrl] = useState<string>("https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80");
+
+  useEffect(() => {
+    const generateImage = async () => {
+      try {
+        const result = await generateNegotiationRoomImage();
+        if (result.imageURL) {
+          setImageUrl(result.imageURL);
+        }
+      } catch (error) {
+        console.error('Failed to generate image:', error);
+        toast.error('Failed to generate custom image, using fallback image');
+      }
+    };
+
+    generateImage();
+  }, []);
+
   return (
     <div className="glass-card p-8 rounded-xl mb-8 scroll-fade-left">
       <h3 className="text-2xl font-semibold text-navy mb-6">Our Team</h3>
@@ -11,7 +31,7 @@ const ContactInfo: React.FC = () => {
       {/* Team image - Updated to show real estate negotiation */}
       <div className="mb-6 overflow-hidden rounded-lg">
         <img 
-          src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+          src={imageUrl}
           alt="Sobha Realty Capital Team during a real estate negotiation" 
           className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
         />
