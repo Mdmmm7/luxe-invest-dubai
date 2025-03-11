@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
               <h3 className="text-xl font-semibold mb-4">Connect With Us</h3>
               <div className="flex space-x-4 mb-6">
                 <a 
-                  href="https://instagram.com" 
+                  href="https://www.instagram.com/sobha_realty_capital/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
                   <Instagram className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://facebook.com" 
+                  href="https://www.facebook.com/profile.php?id=61573540299012" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"

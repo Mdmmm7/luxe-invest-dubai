@@ -167,7 +167,7 @@ const ContactSection: React.FC = () => {
                 <h4 className="text-lg font-medium text-navy mb-4">Follow Us</h4>
                 <div className="flex space-x-4">
                   <a 
-                    href="https://instagram.com" 
+                    href="https://www.instagram.com/sobha_realty_capital/" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
@@ -175,7 +175,7 @@ const ContactSection: React.FC = () => {
                     <Instagram className="h-5 w-5 text-navy" />
                   </a>
                   <a 
-                    href="https://facebook.com" 
+                    href="https://www.facebook.com/profile.php?id=61573540299012" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
