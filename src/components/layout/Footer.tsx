@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
                   <Facebook className="h-5 w-5" />
                 </a>
                 <a 
-                  href="https://wa.me/447351129580" 
+                  href="https://wa.me/447399372291" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-white/10 hover:bg-white/20 p-2 rounded-full transition-colors"

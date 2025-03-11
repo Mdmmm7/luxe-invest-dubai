@@ -72,7 +72,7 @@ const Header: React.FC = () => {
 
           <div className="hidden md:flex space-x-4 items-center">
             <a 
-              href="https://wa.me/447351129580" 
+              href="https://wa.me/447399372291" 
               target="_blank" 
               rel="noopener noreferrer"
               className="flex items-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors"
@@ -148,7 +148,7 @@ const Header: React.FC = () => {
             ))}
             <div className="flex flex-col space-y-3 pt-3">
               <a 
-                href="https://wa.me/447351129580" 
+                href="https://wa.me/447399372291" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="flex items-center justify-center px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md transition-colors"

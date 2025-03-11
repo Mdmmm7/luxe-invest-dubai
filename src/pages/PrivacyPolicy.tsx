@@ -63,9 +63,9 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy, please contact us at:
             </p>
             <p className="text-gray-700 mb-4">
-              Email: VivoNestUae@gmail.com<br />
-              Phone: +44 7351 129580<br />
-              WhatsApp: +44 7351 129580
+              Email: sobharealtycapital@gmail.com<br />
+              Phone: +44 7399 372291<br />
+              WhatsApp: +44 7399 372291
             </p>
           </div>
         </div>

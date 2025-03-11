@@ -148,7 +148,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-navy">Phone</p>
-                    <p className="text-base">+44 7351 129580</p>
+                    <p className="text-base">+44 7399 372291</p>
                   </div>
                 </div>
                 
@@ -158,7 +158,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <p className="text-sm font-medium text-navy">Email</p>
-                    <p className="text-base">SobhaRealtyCapital@gmail.com</p>
+                    <p className="text-base">sobharealtycapital@gmail.com</p>
                   </div>
                 </div>
               </div>
@@ -183,7 +183,7 @@ const ContactSection: React.FC = () => {
                     <Facebook className="h-5 w-5 text-navy" />
                   </a>
                   <a 
-                    href="https://wa.me/447351129580" 
+                    href="https://wa.me/447399372291" 
                     target="_blank" 
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gold/20 p-3 rounded-full transition-colors"
