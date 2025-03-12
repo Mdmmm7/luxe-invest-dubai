@@ -1,20 +1,13 @@
-
 import React from 'react';
 import { Mail, Phone } from 'lucide-react';
 import SocialLinks from './SocialLinks';
-
 const ContactInfo: React.FC = () => {
-  return (
-    <div className="glass-card p-8 rounded-xl mb-8 scroll-fade-left">
-      <h3 className="text-2xl font-semibold text-navy mb-6">Our Team</h3>
+  return <div className="glass-card p-8 rounded-xl mb-8 scroll-fade-left">
+      <h3 className="text-2xl font-semibold text-navy mb-6">Contact</h3>
       
       {/* Team image - Updated to show luxury real estate negotiation room */}
       <div className="mb-6 overflow-hidden rounded-lg">
-        <img 
-          src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-          alt="Sobha Realty Capital Team in luxury real estate negotiation" 
-          className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105"
-        />
+        <img src="https://images.unsplash.com/photo-1497366858526-0766cadbe8fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sobha Realty Capital Team in luxury real estate negotiation" className="w-full h-auto object-cover transition-transform duration-500 hover:scale-105" />
       </div>
       
       <div className="space-y-6">
@@ -43,8 +36,6 @@ const ContactInfo: React.FC = () => {
         <h4 className="text-lg font-medium text-navy mb-4">Follow Us</h4>
         <SocialLinks />
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default ContactInfo;
